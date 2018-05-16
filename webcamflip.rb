@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'hanami/cli'
 require 'bundler/setup'
 
@@ -5,8 +7,6 @@ module WebcamFlip
   module CLI
     module Commands
       extend Hanami::CLI::Registry
-
-
 
       class Version < Hanami::CLI::Command
         desc 'Print version'
@@ -29,10 +29,11 @@ module WebcamFlip
           if kernel_module?
             `ffmpeg -f v4l2 -i /dev/video0 -vf "vflip" -f v4l2 /dev/video1`
           else
-            return 'v4l2loopback not present' 
+            'v4l2loopback not present'
           end
         end
       end
+
       register 'version', Version, aliases: ['v', '-v', '--version']
       register 'run', Run
     end
