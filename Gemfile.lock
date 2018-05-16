@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    concurrent-ruby (1.0.5)
+    hanami-cli (0.2.0)
+      concurrent-ruby (~> 1.0)
+      hanami-utils (~> 1.2)
+    hanami-utils (1.2.0)
+      concurrent-ruby (~> 1.0)
+      transproc (~> 1.0)
+    transproc (1.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  hanami-cli
+
+BUNDLED WITH
+   1.16.1
